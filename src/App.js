@@ -5,7 +5,6 @@ import Header from './comp/store/layout/Header';
 import Dashboard from './comp/wm/Dashboard';
 import Store from './comp/store/Store';
 import Charecter from './comp/store/Charecter';
-import Info from './comp/store/Info';
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
         <Routes>
           <Route path="/wm" element={ <Dashboard/> } />
           <Route path="/" element={ <Store/> } />
-          <Route path="/info" element={ <Info /> } />
           <Route path="/character/:id" element={<Charecter />}  />
         </Routes>
       </Router>

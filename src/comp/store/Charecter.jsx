@@ -89,7 +89,7 @@ export default function Charecter() {
                                 <strong>רמת כח:</strong> {character?.powerLevel}
                             </p>
                             <p>
-                                <strong>משתמש פרי שטן:</strong> {JSON.stringify(character?.devil_fruit)}
+                                <strong>משתמש פרי שטן:</strong> {character.devil_fruit ? 'כן' : 'לא'}
                             </p>
                             {/* <img src={icon} style={{ width: '300px', height: '200px' }} alt="Icon" /> */}
                         </div>
@@ -127,8 +127,8 @@ export default function Charecter() {
                             <div className="comment-bubbles">
                                 {comments.map((comment, index) => (
                                     <div className="comment-bubble" key={index}>
-                                        <blockquote className="speech bubble">{comment}</blockquote>
-                                    </div>
+                                    <blockquote className="speech-bubble">{comment}</blockquote>
+                                </div>
                                 ))}
                             </div>
                         </div>

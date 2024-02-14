@@ -68,7 +68,7 @@ export default function AllCharcters({selectedCategory}) {
                 <ul className="list-group list-group-flush">
                   <li className="list-group-item">קטגוריה: {character.category}</li>
                   <li className="list-group-item">רמת כח: {character.powerLevel}</li>
-                  <li className="list-group-item">משתמש פרי שטן: {JSON.stringify(character.devil_fruit)}</li>
+                  <li className="list-group-item">משתמש פרי שטן: {character.devil_fruit ? 'כן' : 'לא'}   </li>
                 </ul>
                 <div className="card-body" style={{ textAlign: 'center' }}>
 

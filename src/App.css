@@ -93,3 +93,43 @@
   -webkit-line-clamp: 20; /* Adjust the number of lines to be displayed */
   -webkit-box-orient: vertical;
 }
+.comment-bubble {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.speech-bubble {
+  position: relative;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.speech-bubble:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right-color: #fff;
+  margin-top: -10px;
+}
+
+.speech-bubble:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-left-color: #fff;
+  margin-top: -10px;
+}

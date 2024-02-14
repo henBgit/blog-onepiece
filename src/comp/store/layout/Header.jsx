@@ -24,15 +24,10 @@ export default function Header() {
   return (
 
     <div>
-      <div style={{ textAlign: "center", marginBottom: "20px" }}> 
-        {logoURL && <img src={logoURL} style={{ height: '150px', marginRight: '100px' }} alt="Site Logo" />}
+      <div style={{ textAlign: "center", marginBottom: "20px" }}>
+        <Link to={"/"} >  {logoURL && <img src={logoURL} style={{ height: '150px', marginRight: '100px' }} alt="Site Logo" />}
+        </Link>
 
-        <Link to={"/"} className="category-button" style={{ textDecoration: "none" }}>
-          דף הבית
-        </Link>
-        <Link to={"/info"} className="category-button" style={{ textDecoration: "none" }}>
-          מידע וסאגות
-        </Link>
       </div>
 
     </div>
