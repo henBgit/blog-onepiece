@@ -19,7 +19,7 @@ export const getVideos = async () => {
   return videos;
 };
 
-export const uploadVideo = async (title, description, videoFile) => {
+export const uploadVideo = async (title, description, videoFile,selectedCharId) => {
   const filePath = `videos/${Date.now()}_${videoFile.name}`;
   
 
@@ -39,6 +39,7 @@ export const uploadVideo = async (title, description, videoFile) => {
     filePath,
     videoURL: downloadURL,
     timestamp: Date.now(),
+    selectedCharId
   };
 
   await addDoc(videosCollection, videoData);

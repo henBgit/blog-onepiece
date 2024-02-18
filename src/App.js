@@ -5,8 +5,10 @@ import Header from './comp/store/layout/Header';
 import Dashboard from './comp/wm/Dashboard';
 import Store from './comp/store/Store';
 import Charecter from './comp/store/Charecter';
+import AllVideos from './comp/store/AllVideos';
 
 function App() {
+  
   return (
     <div>
       <Router>
@@ -15,6 +17,7 @@ function App() {
           <Route path="/wm" element={ <Dashboard/> } />
           <Route path="/" element={ <Store/> } />
           <Route path="/character/:id" element={<Charecter />}  />
+          <Route path="/videos" element={<AllVideos />}  />
         </Routes>
       </Router>
       

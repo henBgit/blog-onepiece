@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { getVideos,uploadVideo,deleteVideo } from '../services/vidoeService';
+import { getAllCharacters } from '../services/CharctersServices';
 export default function Wmvideos({backToDashboard}) {
 
   const [videos, setVideos] = useState([]);
+  const [characters, setCharacters] = useState([]);
   const [isWaiting, setIsWaiting] = useState(false);
+  const [selectedCharId,setselectedCharId]= useState('');
 
   const [videoForm, setVideoForm] = useState({
     title: '',
@@ -13,14 +16,17 @@ export default function Wmvideos({backToDashboard}) {
   const [isUploading, setIsUploading] = useState(false);
 
   useEffect(() => {
-   
-    async function fetchVideos() {
+    async function fetchData() {
       const fetchedVideos = await getVideos();
       setVideos(fetchedVideos);
+      const fetchedCharacters = await getAllCharacters();
+      setCharacters(fetchedCharacters);
     }
+    fetchData();
+  }, []);
 
-    fetchVideos();
-  }, []); 
+
+
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -38,7 +44,8 @@ export default function Wmvideos({backToDashboard}) {
       const downloadURL = await uploadVideo(
         videoForm.title,
         videoForm.description,
-        videoFile
+        videoFile,
+        selectedCharId
       );
 
    
@@ -49,6 +56,7 @@ export default function Wmvideos({backToDashboard}) {
           title: videoForm.title,
           description: videoForm.description,
           videoURL: downloadURL,
+          selectedCharId:selectedCharId
         },
       ]);
 
@@ -131,6 +139,24 @@ export default function Wmvideos({backToDashboard}) {
           </div>
         </div>
         <form onSubmit={onSubmit} className="dragon-ball-form">
+        <div className="form-group">
+          <label htmlFor="character" className="dragon-ball-label">
+            דמות
+          </label>
+          <select
+            id="character"
+            value={selectedCharId}
+            onChange={(e) => setselectedCharId(e.target.value)}
+            className="form-control dragon-ball-input"
+          >
+            <option value="">בחר דמות</option>
+            {characters.map((character) => (
+              <option key={character.id} value={character.id}>
+                {character.name}
+              </option>
+            ))}
+          </select>
+        </div>
           <div className="form-group">
             <label htmlFor="title" className="dragon-ball-label">
               כותרת

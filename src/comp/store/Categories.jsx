@@ -27,13 +27,13 @@ export default function Categories({ setSelectedCategory, selectedCategory }) {
   };
 
   return (
-    <div style={{ display: "flex", alignItems: "flex-start" }}>
+    <div style={{ display: "flex", alignItems: "flex-start"}} >
     {categories.map((category, index) => (
-      <li className="nav-item active" key={category.id}>
+      <li className="nav-item-active" key={category.id}>
         <span
           className="nav-link category-link"
           id={category.id}
-          style={{ color: "#FFFFFF", fontWeight: "700", marginBottom: "20px" }}
+          style={{ color: "#FFFFFF", fontWeight: "700", marginBottom: "10px" }}
         >
           <button className="category-button" onClick={() => onSelectCategory(category.categoryData)}> {category.categoryData} </button>
         </span>

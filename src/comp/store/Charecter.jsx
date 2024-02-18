@@ -69,11 +69,11 @@ export default function Charecter() {
             <div className="row">
                 <div className="col-md-12">
                     <h2 style={{ textAlign: 'center' }}>{character?.name}</h2>
-                    <div className="card">
+                    <div className="card" >
                         <img
                             src={character?.image_link}
                             className="card-img-top"
-                            style={{ height: '400px' }}
+                          
                             alt={character?.name}
                         />
                         <div className="card-body" style={{ textAlign: 'center' }}>
@@ -109,7 +109,7 @@ export default function Charecter() {
                                     <h1 style={{ textAlign: 'center' }}>{video.title}</h1>
                                     <p style={{ textAlign: 'center' }}>{video.description}</p>
                                     <div className="card mb-3">
-                                        <video src={video.videoURL} controls></video>
+                                        <video src={video.videoURL} controls className="card-img-top" style={{ borderRadius:'10px', border:'1px solid #FFFFF0', height: '450px' ,width:'100%', marginTop:"12px" }}></video>
                                     </div>
                                 </div>
                             ))}

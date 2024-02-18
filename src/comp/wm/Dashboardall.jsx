@@ -29,7 +29,6 @@ export default function Dashboardall() {
       
     return (
         <div>
-            <WmHeader/>
           <div className="container">
                 { activeComponent === null ? (
                 <div className="row banner-row">

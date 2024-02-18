@@ -55,10 +55,10 @@ export default function AllCharcters({selectedCategory}) {
 
 
           {characters.map((character, index) => (
-            <div className="col-md-6" key={index}>
+            <div className="col-md-6" key={index} id={character.name} >
               <div className="card mb-4">
                 <div style={{marginRight:'130px'}}>
-                <img src={character.image_link} className="card-img-top" style={{ borderRadius:'10px', border:'1px solid #FFFFF0', height: '200px' ,width:'300px' }} alt="Character Image"  />
+                <img src={character.image_link} className="card-img-top" style={{ borderRadius:'10px', border:'1px solid #FFFFF0', height: '300px' ,width:'400px', marginTop:"12px" }} alt="Character Image"  />
 
                 </div>
                 <div className="card-body">
@@ -72,7 +72,7 @@ export default function AllCharcters({selectedCategory}) {
                 </ul>
                 <div className="card-body" style={{ textAlign: 'center' }}>
 
-                <Link to={`/character/${character.id}`} className="btn btn-primary">
+                <Link to={`/character/${character.id}`} className="btn btn-primary" style={{backgroundColor:" #2f669d"}}>
                 <img
                       src={icon}
                       style={{ width: '50px', height: '50px' }}

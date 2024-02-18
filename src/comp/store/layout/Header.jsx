@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Categories from '../Categories'
 import { getOnePieceLogo } from '../../services/PicsService'
 import { Link } from 'react-router-dom';
 
@@ -24,9 +23,18 @@ export default function Header() {
   return (
 
     <div>
-      <div style={{ textAlign: "center", marginBottom: "20px" }}>
-        <Link to={"/"} >  {logoURL && <img src={logoURL} style={{ height: '150px', marginRight: '100px' }} alt="Site Logo" />}
+      <div style={{ textAlign: "center", marginBottom: "10px" }} >
+      {logoURL && <img src={logoURL} style={{ height: '140px', marginRight: '60px' }} alt="Site Logo" />}
+      <div className="nav-item active" style={{ marginBottom: "20px" }}>
+      <span className="nav-link category-link" style={{display:'flex',justifyContent:'space-between'}}>
+      <Link to={"/"} className="category-button" > Home
+        </Link> &nbsp;&nbsp;
+        <Link to={"/videos"} className="category-button" >Videos 
         </Link>
+        
+      </span>
+    </div>
+        
 
       </div>
 
