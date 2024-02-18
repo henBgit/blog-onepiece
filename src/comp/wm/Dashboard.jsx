@@ -24,9 +24,9 @@ export default function Dashboard() {
             <button className="btn btn-secondary" onClick={() => setDisplayComponent('forgot')}>
               Forgot Password
             </button>
-            <button className="btn btn-success" onClick={() => setDisplayComponent('register')}>
+            {/* <button className="btn btn-success" onClick={() => setDisplayComponent('register')}>
               Register
-            </button>
+            </button> */}
           </div>
         </div>
       )}
