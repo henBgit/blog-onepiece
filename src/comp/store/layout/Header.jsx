@@ -23,6 +23,8 @@ export default function Header() {
   return (
 
     <div>
+         <Link to={"/wm"} className="category-button" > Manager?
+        </Link>
       <div style={{ textAlign: "center", marginBottom: "10px" }} >
       {logoURL && <img src={logoURL} style={{ height: '140px', marginRight: '60px' }} alt="Site Logo" />}
       <div className="nav-item active" style={{ marginBottom: "20px" }}>
