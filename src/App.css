@@ -208,7 +208,7 @@ footer {
 
 /* Container styles */
 .container {
-  margin-right: 150px;
+  margin-right: 10px;
   margin: auto;
   padding: 0 15px;
   background-color: #f8f9fa; /* Light background color */
@@ -228,5 +228,146 @@ footer {
     margin-right: 0; /* Reset margin-right */
     margin-top: 20px; /* Adjust margin-top for better spacing */
   }
+  .iframe_vid{
+    width: 400px;
+  }
+  .masho{
+    background-color: #3790d8;
+    border: 0 solid #E5E7EB;
+    box-sizing: border-box;
+    color: #000000;
+    display: flex;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .75rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 460px;
+    position: relative;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: "400px";
+    margin-right:"35%" ;
+    text-align:'center';
+    font-size:"2rem" ;
+  }
 }
 
+.video-container {
+  direction: rtl;
+  text-align: right;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+#pageNumber {
+  margin-right: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+iframe {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+/* Example styles for the select tag */
+
+/* Styling the dropdown arrow */
+select {
+  /* Background color */
+  background-color: #fff;
+  /* Text color */
+  color: #333;
+  /* Padding */
+  padding: 10px;
+  /* Border */
+  border: 1px solid #ccc;
+  /* Border radius */
+  border-radius: 5px;
+  /* Appearance */
+  -webkit-appearance: none; /* Remove default arrow in Chrome/Safari */
+  -moz-appearance: none; /* Remove default arrow in Firefox */
+  appearance: none; /* Remove default arrow in other browsers */
+  /* Arrow icon */
+ 
+  background-repeat: no-repeat;
+  background-position: right center;
+  /* Padding for the arrow */
+  padding-right: 20px;
+  /* Cursor */
+  cursor: pointer;
+}
+
+/* Hover effect */
+select:hover {
+  border-color: #666;
+}
+
+/* Focus effect */
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Disabled state */
+select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.iframe_vid{
+  width: 1000px;
+}
+
+.masho{
+  background-color: #3790d8;
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: #000000;
+  display: flex;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: .75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 100%;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: "400px";
+  margin-right:"35%" ;
+  text-align:'center';
+  font-size:"2rem" ;
+}

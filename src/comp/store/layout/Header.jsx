@@ -32,6 +32,8 @@ export default function Header() {
       <Link to={"/"} className="category-button" > Home
         </Link> &nbsp;&nbsp;
         <Link to={"/videos"} className="category-button" >Videos 
+        </Link>&nbsp;&nbsp;
+        <Link to={"/episodes"} className="category-button" >Episodes 
         </Link>
         
       </span>

@@ -17,6 +17,7 @@ export default function Dashboard() {
           {displayComponent === 'login' && <WmLogin setIsLogin={setIsLogin} isLogin={isLogin} />}
           {displayComponent === 'forgot' && <WmForgot />}
           {displayComponent === 'register' && <WmRegister />}
+          
           <div className="button-group" style={{ textAlign: "center" }}>
             <button className="btn btn-primary" onClick={() => setDisplayComponent('login')}>
               Login
@@ -24,9 +25,9 @@ export default function Dashboard() {
             <button className="btn btn-secondary" onClick={() => setDisplayComponent('forgot')}>
               Forgot Password
             </button>
-            {/* <button className="btn btn-success" onClick={() => setDisplayComponent('register')}>
+            <button className="btn btn-success" onClick={() => setDisplayComponent('register')}>
               Register
-            </button> */}
+            </button>
           </div>
         </div>
       )}
